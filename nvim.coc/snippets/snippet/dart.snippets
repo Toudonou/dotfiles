@@ -1,0 +1,50 @@
+snippet statefulW
+class $1 extends StatefulWidget {
+  const $1({super.key});
+
+  @override
+  State<$1> createState() => _$1State();
+}
+
+class _$1State extends State<$1> {
+  @override
+  Widget build(BuildContext context) {
+    return Container($0);
+  }
+}
+endsnippet
+
+
+snippet setSate
+    setState(() {
+     $1;
+    });
+endsnippet
+
+snippet statelessW 
+class $1 extends StatelessWidget {
+  const $1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container($0);
+  }
+}
+endsnippet
+
+snippet customPainter 
+
+class $1 extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+  $0
+  }
+
+  @override
+  bool shouldRepaint($1 oldDelegate) => true;
+
+  @override
+  bool shouldRebuildSemantics($1 oldDelegate) => false;
+}
+endsnippet
+

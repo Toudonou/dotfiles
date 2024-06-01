@@ -1,0 +1,105 @@
+{
+	// "suggest.enableFloat": false,
+
+	"languageserver": {
+  "intelephense": {
+    "command": "intelephense",
+    "args": ["--stdio"],
+    "filetypes": ["php"],
+    "initializationOptions": {
+      "storagePath": "/tmp/intelephense"
+    }
+  }
+},
+
+	
+	// "intelephense.enable": false,
+	// "phpls.enable": true,
+
+	"snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
+	"snippet.highlight": true,
+	"colors.enable": true,
+	"suggest.noselect": false,
+	"suggest.floatConfig": {
+		"rounded": true,
+		"border": true,
+		"shadow": true
+	},
+	"suggest.timeout": 15000,
+	"suggest.removeDuplicateItems": true,
+	"signature.floatConfig": {
+		"rounded": true,
+		"border": true,
+		"shadow": true
+	},
+
+	"html.suggest.html5": true,
+	"suggest.maxCompleteItemCount": 50,
+	"suggest.completionItemKindLabels": {
+		"method": "  Method",
+		"function": "  Function",
+		"variable": "[] Variable",
+		"field": "  Field",
+		"typeParameter": " <> TypeParameter",
+		"constant": "  Constant",
+		"class": " פּ Class",
+		"interface": " 蘒Interface",
+		"struct": "   Struct",
+		"event": "  Event",
+		"operator": "  Operator",
+		"module": "  Module",
+		"property": "  Property",
+		"enum": " 練Enum",
+		"reference": "  Link",
+		"keyword": "  Keyword",
+		"file": "  File",
+		"folder": " ﱮ Folder",
+		"color": "  Color",
+		"unit": " 塞 Unit",
+		"snippet": "  Snippet",
+		"text": "  Text",
+		"constructor": "  Constructor",
+		"value": "  Value",
+		"enumMember": "  Enum",
+		"default": "\uf29c"
+	},
+	
+	"notification.border": true,
+	
+	"suggest.languageSourcePriority": 100000,
+	"diagnostic.refreshOnInsertMode": true,
+	"dialog.rounded": true,
+	"diagnostic.virtualText": true,
+	"diagnostic.virtualTextCurrentLineOnly": false,
+	"diagnostic.virtualTextPrefix": "  ●●",
+	"diagnostic.errorSign": " ",
+	"diagnostic.warningSign": " ",
+	"diagnostic.hintSign": "ﴞ ",
+	"diagnostic.infoSign": " ",
+	"diagnostic.floatConfig": {
+		"rounded": true,
+		"border": true,
+		"shadow": true
+	},
+
+	"flutter.provider.hot-reload": true,
+
+	"vimlsp.debug": true,
+	"vimlsp.diagnostic.enable": true,
+
+	"codeLens.enable": true,
+	"java.implementationsCodeLens.enabled": true,
+	"java.referencesCodeLens.enabled": true,
+	"java.jdt.ls.vmargs": "-javaagent:/usr/local/share/lombok/lombok.jar",
+
+	"coc.preferences.formatOnSaveFiletypes": [
+		"json",
+		"dart",
+		"java"
+  ],
+
+    "semanticTokens.enable": true,
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/clangd-linux-16.0.2/clangd_16.0.2/bin/clangd",
+    "snippets.ultisnips.pythonPrompt": false,
+
+}
