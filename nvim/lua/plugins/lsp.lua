@@ -24,6 +24,7 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 "clangd",
+                "tsserver",
             },
         })
         require("lspconfig.ui.windows").default_options.border = "single"
@@ -65,6 +66,7 @@ return {
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
         local on_attach = function(client, bufnr)
             -- format on save
+            -- INFO: IN AUTO COMMAND
             -- if client.server_capabilities.documentFormattingProvider then
             --     vim.api.nvim_create_autocmd("BufWritePre", {
             --         group = vim.api.nvim_create_augroup("Format", { clear = true }),
@@ -78,6 +80,27 @@ return {
 
         -- configure clangd server (with special settings)
         lspconfig["clangd"].setup({
+          cmd = { "clangd" },
+          filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+          single_file_support = true,
+          on_attach = on_attach,
+          capabilities = capabilities,
+          flags = lsp_flags,
+          root_dir = nvim_lsp.util.root_pattern(
+            '.clangd',
+            '.clang-tidy',
+            '.clang-format',
+            'compile_commands.json',
+            'compile_flags.txt',
+            'configure.ac',
+            '.git'
+          ),
+          -- init_option = { fallbackFlags = {  "-std=c++2a"  } }
+
+        })
+
+        -- configure tsserver server (with special settings)
+        lspconfig["tsserver"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
